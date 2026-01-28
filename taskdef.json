@@ -1,0 +1,44 @@
+{
+  "family": "webapp-devops-workshop",
+  "taskRoleArn": "arn:aws:iam::616491134203:role/devops-cluster-TaskRole-yuZEva8DhnD1",
+  "executionRoleArn": "arn:aws:iam::616491134203:role/ECSTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "webapp",
+      "image": "616491134203.dkr.ecr.us-east-1.amazonaws.com/devops-workshop-app:latest",
+      "cpu": 0,
+      "links": [],
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [],
+      "dnsServers": [],
+      "dnsSearchDomains": [],
+      "extraHosts": [],
+      "dockerSecurityOptions": [],
+      "dockerLabels": {},
+      "ulimits": [],
+      "systemControls": [],
+      "credentialSpecs": []
+    }
+  ],
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512"
+}
